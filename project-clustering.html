@@ -48,7 +48,22 @@
 
     <div class="main-wrap">
       <div class="presentation">
-        <h1>Improving customer segmentation with clustering techniques</h1>
+        <h1>
+          Segmenting Customers Using Clustering Techniques: A Data Science
+          Project Overview
+        </h1>
+      </div>
+      <div class="presentation">
+        <h4>The business challenge</h4>
+      </div>
+      <div class="bio-paragraph">
+        <p>
+          After four email campaigns and no conversion, the marketing team
+          realizes that this is a crucial project to focus on, specially now
+          that are planning next year's marketing strategies. They had never
+          invested in profiling their customer base, and they need to know what
+          are the characteristics of the existing segments they are targeting.
+        </p>
       </div>
       <div class="row">
         <div class="col-md-6">
@@ -56,15 +71,17 @@
         </div>
         <div class="col-md-6 text">
           <p>
-            The email marketing team has had no success with their email
-            campaigns. They are planning next year's strategies and recognize
-            they are not clear about who their actual customers are, so I will
-            help them find out with some clustering techniques.
+            To help them improve their engagement and conversion rate, I
+            utilized clustering techniques to segment the customers based on a
+            dataset they provided, that contained demographics, buying behavior,
+            and interaction with previous email campaigns. The primary aim of
+            this project was to assist them in understanding and defining their
+            customer segments better, to develop effective marketing strategies.
           </p>
         </div>
       </div>
       <div class="presentation">
-        <h3>Models, techniques and libraries used on this project:</h3>
+        <h4>Models, techniques and libraries used for this project:</h4>
       </div>
       <div class="bio-paragraph">
         <ul>
@@ -77,10 +94,14 @@
             data from the columns that will be used for profiling (demographic
             data).
           </li>
-          <li>Scaling the data and applying PCA and T-SNE.</li>
+          <li>Preprocessing the data applying PCA and T-SNE.</li>
           <li>
-            Clustering models: K-Means, K-Medoids, Hierarchical clustering,
-            DBSCAN and Gaussian Mixture Model.
+            Clustering techniques: K-Means, K-Medoids, Hierarchical clustering,
+            DBSCAN, and Gaussian Mixture Model.
+          </li>
+          <li>
+            For clusters' assessment and evaluation: The Elbow method and
+            Silhouette score.
           </li>
           <li>
             Python libraries used: NumPy, Pandas, Sklearn, Matplotlib, Seaborn.
@@ -88,28 +109,322 @@
         </ul>
       </div>
       <div class="presentation">
-        <h3>ABSTRACT</h3>
+        <h2>The proposed solution: four distinct customer segments</h2>
       </div>
       <div class="bio-paragraph">
         <p>
-          After four campaigns and almost no engagement, doing some customer
-          research is needed to better understand what are the segments in the
-          customers that the store already has, and how to reach new ones. With
-          these project, I found out they have four customer segments, clearly
-          differentiated by customers' behaviour regarding the type of product
-          they consume and amount spent.
+          After experimenting with different clustering models and comparing
+          their results not only from a technical perspective but business-wise,
+          I chose the K-Means clustering model using K=4 as the optimal
+          solution. <br /><br />This approach provided four distinct customer
+          segments based on their purchasing behavior patterns and habits. The
+          chosen solution was superior to other alternatives as it provided
+          clear differentiation between customers in a relevant way to shape
+          marketing strategies - even when that meant not choosing the best
+          models technically.<br /><br />For example, there were a few models
+          that had better silhouette scores than the model that I chose as the
+          best solution, but at the moment of profiling their clusters, they
+          were not differentiated in ways that were useful from a marketing
+          standpoint. Some of them would put all the purchases of any product in
+          one cluster, and none on the others. Or they wouldn't differentiate
+          clearly regarding sales channels or the amount spent monthly in the
+          store.<br /><br />The solution I will present now gives the most
+          distinguishable and meaningful differences between clusters,
+          business-wise.
         </p>
       </div>
       <div class="presentation">
-        <h2>BACKGROUND AND QUESTIONS</h2>
+        <h4>The model: K-Means, for k=4</h4>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="media/kmeans_4_value_counts.jpg"
+            class="img-fluid weatherapp"
+          />
+        </div>
+        <div class="col-md-6">
+          <img src="media/kmeans_4.jpg" class="img-fluid weatherapp" />
+        </div>
+      </div>
+      <div class="presentation">
+        <h4>Diving deeper into each segment profile</h4>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>1st Segment:</strong></p>
+          <ul>
+            <li>They are 1,003 low-income customers.</li>
+            <li>Buy the least of all segments in any product.</li>
+            <li>Purchase mainly store.</li>
+            <li>Low price purchases.</li>
+            <li>Have not accepted any email marketing campaign.</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <p><strong>2nd Segment:</strong></p>
+          <ul>
+            <li>They are 468 medium-high income customers.</li>
+            <li>
+              Buy highest quantities of fish, fruits, sweets, and gold products
+              of all segments.
+            </li>
+            <li>largest total purchases, and second highest purchase value.</li>
+            <li>Have not accepted any email marketing campaign.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>3rd Segment:</strong></p>
+          <ul>
+            <li>They are 558 medium-income customers.</li>
+            <li>Wine is what they purchase the most.</li>
+            <li>They purchase deals more than all the other segments.</li>
+            <li>They purchase mainly in store and some online purchases.</li>
+            <li>Have not accepted any email marketing campaign.</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <p><strong>4th Segment:</strong></p>
+          <ul>
+            <li>They are 198 high-income customers.</li>
+            <li>They purchase more wine than all the other segments.</li>
+            <li>
+              They purchase mainly through catalog, followed by in store
+              purchases.
+            </li>
+            <li>They make the highest purchase value of all segments.</li>
+            <li>They have accepted one email marketing campaign.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="presentation">
+        <h4>Reasons for choosing this segmentation</h4>
       </div>
       <div class="bio-paragraph">
+        <ul>
+          <li>
+            It assigns products to different segments. This allows to target
+            more effectively. On the contrary, none of the other models
+            presented balanced segments regarding product consumption or sales
+            channel preferred by the customers.
+          </li>
+          <li>
+            The number of customers on each segment is distributed in a fairly
+            balanced proportion.
+          </li>
+          <li>
+            The differences between segments profiles, provides valuable
+            insights that can be effectively leveraged for marketing strategies.
+          </li>
+        </ul>
+      </div>
+
+      <div class="presentation">
+        <h4>Recommendations and action steps</h4>
+      </div>
+
+      <div class="bio-paragraph">
+        <ul>
+          <li>
+            Test this customer segmentation model for a defined period to
+            measure the impact on conversion rates. By monitoring the results
+            and collecting this data, we can evaluate further and identify any
+            areas for improvement.
+          </li>
+          <li>
+            Continue gathering data, with a specific focus on tracking changes
+            in customer behavior related to product purchases, sales channels,
+            and spending patterns. By this we can refine the segmentation
+            strategy and optimize marketing initiatives for each segment.
+          </li>
+          <li>
+            Track recency metrics as part of ongoing data analysis to improve
+            customer engagement and customer loyalty strategies.
+          </li>
+          <li>
+            Define a deadline to apply the segmentation model again to the
+            updated dataset. This will allow us to evaluate this solution over
+            time, identify any shifts in customer behavior, and make any
+            necessary adjustments to our approach.
+          </li>
+        </ul>
+      </div>
+      <div class="presentation">
+        <h4>Benefits to expect from using this segmentation</h4>
+      </div>
+      <div class="bio-paragraph">
+        <ul>
+          <li>Improving the conversion rate of email marketing campaigns,</li>
+          <li>effective upselling and cross-selling,</li>
+          <li>better ROI,</li>
+          <li>developing stronger strategies to reach new customers, and</li>
+          <li>
+            leveraging this input to redesign and improve sales channels and
+            marketing initiatives.
+          </li>
+        </ul>
+      </div>
+      <div>
         <p>
-          The aim of thi project is to help them find the best possible customer
-          segmentation. This project was my capstone project to complete the
-          Applied data science program I took at MIT Professional Education
-          during 2022.
+          Of course, there are always risks involved, and this solution is a
+          recommendation that is yet to be tested on production. If after a
+          period of time the marketing do not see changes on the conversion rate
+          or ther customer behaviours, we can reassess the definition of these
+          segments.
         </p>
+      </div>
+      <div class="presentation">
+        <h2>How did I reach this solution</h2>
+      </div>
+
+      <div class="presentation">
+        <h4>1. The dataset</h4>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img src="media/dataset.jpg" class="img-fluid weatherapp" />
+        </div>
+        <div class="col-md-6 text">
+          <img
+            src="media/variables_clusters_profiling.jpg"
+            class="img-fluid weatherapp"
+          />
+        </div>
+      </div>
+      <div class="presentation">
+        <h4>2. Clustering Models</h4>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="media/silhouette_score_kmeans.jpg"
+            class="img-fluid weatherapp"
+          />
+        </div>
+        <div class="col-md-6 text">
+          <p>
+            Finding silhouette score for different values of K, to choose which
+            of those I will use to apply K-Means.
+          </p>
+        </div>
+      </div>
+
+      <div class="presentation">
+        <h5>K-Means, for k=3</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="media/k3_plot.jpg" class="img-fluid weatherapp" />
+        </div>
+        <div class="col-md-6 text">
+          <img src="media/k3_valuecounts.jpg" class="img-fluid weatherapp" />
+        </div>
+      </div>
+
+      <div class="presentation">
+        <h5>K-Means, for k=4 (this is the chosen solution)</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="media/kmeans_4.jpg" class="img-fluid weatherapp" />
+        </div>
+        <div class="col-md-6 text">
+          <img
+            src="media/kmeans_4_value_counts.jpg"
+            class="img-fluid weatherapp"
+          />
+        </div>
+      </div>
+
+      <div class="presentation">
+        <h5>K-Means, for k=5</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="media/k5_plot.jpg" class="img-fluid weatherapp" />
+        </div>
+        <div class="col-md-6 text">
+          <img src="media/k5_valuecounts.jpg" class="img-fluid weatherapp" />
+        </div>
+      </div>
+
+      <div class="presentation">
+        <h5>K-Medoids, for k=5</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="media/kmedoids_silhouettesc.jpg"
+            class="img-fluid weatherapp"
+          />
+        </div>
+        <div class="col-md-6 text">
+          <p>Finding silhouette score for k = 5, to apply K-Medoids.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="media/kmedoids_5_plot.jpg" class="img-fluid weatherapp" />
+        </div>
+        <div class="col-md-6 text">
+          <img
+            src="media/kmedoids_5_valuecounts.jpg"
+            class="img-fluid weatherapp"
+          />
+        </div>
+      </div>
+
+      <div class="presentation">
+        <h5>Hierarchical Clustering</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="media/hierarchicalclustering_plot.jpg"
+            class="img-fluid weatherapp"
+          />
+        </div>
+        <div class="col-md-6 text">
+          <img src="media/HC_valuecounts.jpg" class="img-fluid weatherapp" />
+        </div>
+      </div>
+
+      <div class="presentation">
+        <h5>Gaussian Mixture Model, for k=5</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="media/GMM_silhouettesc.jpg" class="img-fluid weatherapp" />
+        </div>
+        <div class="col-md-6 text">
+          <p>
+            Finding silhouette score for k = 5, to apply Gaussian Mixture Model.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="media/GMM_plot.jpg" class="img-fluid weatherapp" />
+        </div>
+        <div class="col-md-6 text">
+          <img src="media/GMM_valuecounts.jpg" class="img-fluid weatherapp" />
+        </div>
+      </div>
+
+      <div class="presentation">
+        <h5>Silhouette score of each model applied</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img
+            src="media/silhouettesc_allmodels.jpg"
+            class="img-fluid weatherapp"
+          />
+        </div>
       </div>
 
       <div class="container">
