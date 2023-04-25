@@ -132,6 +132,14 @@ button:hover {
   border-radius: 7px;
 }
 
+.profile {
+  width: 80%;
+  height: auto;
+  margin-top: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 7px;
+}
+
 .brushes {
   width: 100%;
   height: auto;
