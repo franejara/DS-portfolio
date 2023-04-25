@@ -93,6 +93,12 @@ button:hover {
   margin: 40px 100px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .main-wrap {
+    margin: 25px;
+  }
+}
+
 .presentation {
   text-align: left;
   margin-top: 80px;
