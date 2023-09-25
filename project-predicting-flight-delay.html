@@ -49,8 +49,7 @@
     <div class="main-wrap">
       <div class="presentation">
         <h1>
-          Forecasting Rent Growth in America's Most Walkable Cities: A Time
-          Series Modeling Approach
+          Grounded or Going? Predicting Flight Delays with Logistic Regression
         </h1>
       </div>
       <div class="presentation">
@@ -58,62 +57,56 @@
       </div>
       <div class="bio-paragraph">
         <p>
-          A year ago, my partner and I relocated to a different neighborhood
-          when our rent increased by over $400. This sudden increase came as a
-          shock to us, as we had not experienced such a significant hike in the
-          past six years. This made me curious about the situation in other
-          cities across the country. Were they facing a similar trend? And if
-          so, which cities were being hit the hardest? Furthermore, I wondered
-          if there were any cities that were both urban and walkable while still
-          maintaining reasonable rent prices.
+          I was originally looking at time series forecasting by trying to
+          predict rent price trends in the most walkable cities in the U.S.
+          However, when I was starting that project a friend mentioned an open
+          dataset published by our regional airport. With a lifelong passion for
+          travel, I was immediately intrigued by the potential to analyze this
+          data.
         </p>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <img src="media/forecasting_rent.jpg" class="img-fluid weatherapp" />
+          <img src="media/flight_delay.jpg" class="img-fluid weatherapp" />
         </div>
         <div class="col-md-6 text">
-          <h4>Finding the right dataset</h4>
+          <h4>Exploring the dataset</h4>
 
           <div class="bio-paragraph">
             <p>
-              After clarifying the aim of my project, I began searching for
-              relevant data sources. While I came across several well-known
-              databases containing rental price information, I found one
-              database particularly well-done for a project like this, allowing
-              me to start using it immediately. It contained a comprehensive
-              time series of the percentage growth of monthly rent prices in 130
-              U.S. cities over the last five years. I found it on
-              apartmentlist.com.<br /><br />I chose the ranking system by
-              walkscore.com to identify the most walkable cities, which I then
-              selected for this time series modeling project.
+              The dataset contained detailed flight information as scheduled and
+              operation departure date & times, destination cities, airlines,
+              day, month and year and more. With some feature engineering, it is
+              prime material for training a binary classifier to predict flight
+              delays. <br /><br />I am currently in the midst of preprocessing
+              the raw data to prepare it for modeling. Logistic regression will
+              be the first machine learning algorithm I implement for this
+              binary classification tasks. <br /><br />As I continue developing
+              the data pipeline and logistic regression model, I look forward to
+              refining my data science skills and providing key insights for the
+              business.
             </p>
           </div>
         </div>
       </div>
       <div class="presentation">
-        <h3>Models, techniques and libraries used for this project:</h3>
+        <h3>
+          Libraries, techniques and model(s) I am applying for this project:
+        </h3>
       </div>
       <div class="bio-paragraph">
         <ul>
           <li>
-            Python libraries used: NumPy, Pandas, Matplotlib, Statsmodels and
+            Python libraries used: NumPy, Pandas, Matplotlib, Seaborn and
             Sklearn.
           </li>
+          <li>Initial EDA, data visualization and feature engineering,</li>
           <li>
-            Initial EDA, selecting the cities for modeling, and transforming
-            each of these subsets into univariate time series,
+            Splitting the dataset for training and testing, and preprocessing
+            the data,
           </li>
-          <li>
-            Decomposition of the time series, applying the Seasonal
-            Decomposition of Time Series (STL) and implementing the Augmented
-            Dicky-Fuller test,
-          </li>
-          <li>
-            Splitting the dataset for training, and differencing the training
-            set.
-          </li>
-          <li>Model evaluation: ARIMA.</li>
+          <li>Applying logistic regression,</li>
+          <li>Model performance evaluation and hyperparameter tuning.</li>
         </ul>
       </div>
       <div class="presentation">
@@ -122,12 +115,13 @@
       <div class="bio-paragraph">
         <p>
           As mentioned, I am currently working on this project and have begun
-          applying the initial models to the data. The Jupyter notebook I am
-          using is still in the first draft phase and is filled with
-          experimental and testing code. If you are interested in learning more
-          about the specifics of this project,
+          the preprocessing steps to apply the first model. The Jupyter notebook
+          I am using is in a draft phase and is filled with notes to myself
+          about things to complete, refine, my workflow and some testing code.
+          If you are interested in learning more about the specifics of this
+          project,
           <a
-            href="https://github.com/franejara/forecasting-rent-growth"
+            href="https://github.com/franejara/challenge-data-scientist"
             target="_blank"
             >you can find it here on my GitHub page.</a
           >
